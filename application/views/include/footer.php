@@ -202,21 +202,21 @@
 					 
 				   if(data=='YesA'){
 
-				   	window.location.replace("http://localhost/171115032/Admin");
+				   	window.location.replace("http://localhost/171-115-032/Admin");
 
 				   }else if(data=='YesB'){
 
-				   	window.location.replace("http://localhost/171115032/welcome");
+				   	window.location.replace("http://localhost/171-115-032/welcome");
 
 				   }
 				   else if(data=='YesC'){
 
-				   	window.location.replace("http://localhost/171115032/Hotel");
+				   	window.location.replace("http://localhost/171-115-032/Hotel");
 
 				   }
 				   else if(data=='YesD'){
 
-				   	window.location.replace("http://localhost/171115032/Restaurant");
+				   	window.location.replace("http://localhost/171-115-032/Restaurant");
 
 				   }else{
 
