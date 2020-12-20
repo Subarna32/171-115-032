@@ -37,7 +37,7 @@
 						<a href="#" data-toggle="modal" data-target="#myModal1">About Room</a>
 					</div>
 					<div class="col-md-4 readmore-w3-agileits about-book">
-						<?php if($this->session->userdata('ID')) { ?> 
+						<?php if(($this->session->userdata('ID')) && ($this->session->userdata('Type')=='User') ) { ?> 
 							<a href="#" data-toggle="modal" data-target="#myModal2">Book Now</a>
 						<?php }else{ ?>
 							<a href="#" data-toggle="modal" data-target="#myModal3">Book Now</a>
@@ -85,7 +85,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4>Please Sign In</h4>
+					<h4>Please Sign In As User</h4>
 				</div>
 			</div>
 
