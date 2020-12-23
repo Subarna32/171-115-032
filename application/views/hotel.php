@@ -48,7 +48,7 @@
 				<div class="search col-md-3">
 
 					<div class="form-group"> 
-						<input type="date" class="form-control" value="<?=set_value('check_in')?>" placeholder="Check-in Date" name="check_in"  style="line-height: 20px;">
+						<input type="text" onfocus="(this.type='date')" id="date" class="form-control" value="<?=set_value('check_in')?>" placeholder="Check-in Date" name="check_in"  style="line-height: 20px;">
 						<div class="error"><?=form_error('check_in')?></div>
 					</div>
 
@@ -58,7 +58,7 @@
 				<div class="search col-md-3">
 
 					<div class="form-group"> 
-						<input type="date" class="form-control" value="<?=set_value('check_out')?>" placeholder="Check-out Date" name="check_out"  style="line-height: 20px;">
+						<input type="text" onfocus="(this.type='date')" id="date" class="form-control" value="<?=set_value('check_out')?>" placeholder="Check-out Date" name="check_out"  style="line-height: 20px;">
 						<div class="error"><?=form_error('check_out')?></div>
 					</div>
 
