@@ -81,7 +81,7 @@
 										<a href="<?=base_url()?>welcome/hotel">Hotel</a>
 									</li>
 									<li <?php if($this->uri->segment(2)=='rest'||$this->uri->segment(2)=='about_restaurant'){ echo 'class="active"'; } ?> >
-										<a href="<?=base_url()?>welcome/rest">Restaurents</a>
+										<a href="<?=base_url()?>welcome/rest">Restaurants</a>
 									</li>
 									<li <?php if($this->uri->segment(2)=='sc'){ echo 'class="active"'; } ?> >
 										<a href="<?=base_url()?>welcome/sc">Shopping Complex</a>
