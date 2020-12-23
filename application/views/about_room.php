@@ -72,7 +72,7 @@
 					<h4><?=$row['Room_Type'];?></h4><br>
 					<h3 style="text-align:center";><?=$row['Room_no'];?></h3>
 					<br>
-					<img style="height:250px;" src="<?=base_url()?>images/<?=$row['Photo1'];?>" alt="" />
+					<img style="height:250px;" src="<?=base_url()?>images/<?=$row['Photo2'];?>" alt="" />
 					<span><?=$row['Room_description'];?></span>
 				</div>
 			</div>
