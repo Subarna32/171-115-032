@@ -23,7 +23,7 @@
 	<div class="trips-section">
 		<div class="container">
 			<h3 class="title">Hotel</h3>
-		
+			<br><br><br>
 			<form action="" method="post">
 			
 			<div class="search_div row col-lg-12">
