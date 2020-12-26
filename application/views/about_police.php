@@ -46,10 +46,10 @@
 							<div class="col-md-9">
 								<br>
 								<br>
-								<h1><?=$row['Address']?></h1>
+								<h1><?=$row['Organization_name']?></h1>
 								<br>
-								<p><strong><?=$row['Organization_name']?><strong></p>
-								<p><strong>Contact Number(For Serial): </strong><?=$row['Phone']?></p>
+								<p><strong>Address:<strong> <?=$row['Address']?></p>
+								<p><strong>Contact Number: </strong><?=$row['Phone']?></p>
 							 
 							</div>
 						
