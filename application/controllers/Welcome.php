@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 	public function hotel()
 	{
 
-			 $this->form_validation->set_rules('check_in', 'Check ', 'required');
+			 $this->form_validation->set_rules('check_in', 'Check In', 'required');
 			 $this->form_validation->set_rules('check_out', 'Check Out', 'required');
 			 $this->form_validation->set_rules('Room_Type', 'Room Type', 'required');
 	 
