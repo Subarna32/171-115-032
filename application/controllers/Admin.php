@@ -275,7 +275,44 @@ class Admin extends CI_Controller {
 			$idata['Phone']=$this->input->post('phone');
 
 			$idata['Cuisine']=$this->input->post('cuisine');
+			
+			if(!empty($_FILES) && ($_FILES['organization_image']['name'])){
+			
 
+			  $config['upload_path'] = 'images/';
+			  $config['allowed_types'] = 'gif|jpg|png|jpeg|pdf';
+			  $this->load->library('upload', $config);
+			   if (!$this->upload->do_upload('organization_image')) {
+			     $this->session->set_flashdata('message', $this->upload->display_errors());
+			 
+					redirect('signup');
+			 } else {
+			  $avatar = $this->upload->data();
+			  $organization_image = $avatar['file_name'];
+
+			  $idata['Image1']=$organization_image;
+			 }
+
+			}
+			if(!empty($_FILES) && ($_FILES['organization_image1']['name'])){
+			
+
+			  $config['upload_path'] = 'images/';
+			  $config['allowed_types'] = 'gif|jpg|png|jpeg|pdf';
+			  $this->load->library('upload', $config);
+			   if (!$this->upload->do_upload('organization_image1')) {
+			     $this->session->set_flashdata('message', $this->upload->display_errors());
+			 
+					redirect('signup');
+			 } else {
+			  $avatar = $this->upload->data();
+			  $organization_image1 = $avatar['file_name'];
+
+			  $idata['Image2']=$organization_image1;
+			 }
+
+			}
+			
 			if(!empty($_FILES) && ($_FILES['pdffile']['name'])){
 			
 
@@ -296,44 +333,7 @@ class Admin extends CI_Controller {
 
 			}
 			
-			if(!empty($_FILES) && ($_FILES['organization_image']['name'])){
-			
-
-			  $config1['upload_path'] = 'images/';
-			  $config1['allowed_types'] = 'gif|jpg|png|jpeg|pdf';
-			  $this->load->library('upload', $config1);
-			   if (!$this->upload->do_upload('organization_image')) {
-			     $this->session->set_flashdata('message', $this->upload->display_errors());
-			
-					redirect('signup');
-			 } else {
-			  $avatar = $this->upload->data();
-			  $organization_image = $avatar['file_name'];
-
-			  $idata['Image1']=$organization_image;
-			 }
-
-			}
-			
-			
-			if(!empty($_FILES) && ($_FILES['organization_image1']['name'])){
-			
-
-			  $config2['upload_path'] = 'images/';
-			  $config2['allowed_types'] = 'gif|jpg|png|jpeg|pdf';
-			  $this->load->library('upload', $config2);
-			   if (!$this->upload->do_upload('organization_image1')) {
-			     $this->session->set_flashdata('message', $this->upload->display_errors());
-			 
-					redirect('signup');
-			 } else {
-			  $avatar = $this->upload->data();
-			  $organization_image1 = $avatar['file_name'];
-
-			  $idata['Image2']=$organization_image1;
-			 }
-
-			}else{
+			else{
 			
 			$message='<div class="alert alert-danger">Please Add Your Image</div>';
 
@@ -345,7 +345,7 @@ class Admin extends CI_Controller {
 			
 			$this->db->insert('tbl_food',$idata);
 
-			$message='<div class="alert alert-success">Data Updated Successfully</div>';
+			$message='<div class="alert alert-success">Data Inserted Successfully</div>';
 
 			$this->session->set_flashdata('message',$message);
 
