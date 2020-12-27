@@ -36,7 +36,11 @@
 						<a href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
 					</div>
 					<div class="col-md-4 readmore-w3-agileits about-menu">
-						<a href="#" data-toggle="modal" data-target="#myModal2">See Menu</a>
+						<?php if(($this->session->userdata('ID')) && ($this->session->userdata('Type')=='User') ) { ?> 
+							<a href="#" data-toggle="modal" data-target="#myModal2">See Menu</a>
+						<?php }else{ ?>
+							<a href="#" data-toggle="modal" data-target="#myModal3">See Menu</a>
+						<?php } ?>
 					</div>
 					
 				</div>
@@ -81,6 +85,18 @@
 					<br>
 					<iframe style="width: 100%;min-height: 700px;" download="" src="<?=base_url()?>pdf/<?=$row['Pdf']?>" title="" ></iframe>
 					
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4>Please Sign In As User</h4>
 				</div>
 			</div>
 
